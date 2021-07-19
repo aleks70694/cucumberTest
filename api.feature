@@ -7,7 +7,7 @@ Scenario: Получить список встреч весь API
         |ИнжирингАктив |отменена |24.07.2021 11:00|
     And my request contains "type=KSK"
     When I request "list of KSK" endpoint
-    Then I should receive "list of three meetings"
+    Then I should receive list of "3" meetings
         
 Scenario: Получить список встреч по холдингу API
     Given authorized with role EFS_CM_KEY_CLIENTS
