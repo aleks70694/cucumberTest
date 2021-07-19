@@ -22,6 +22,7 @@ Scenario: Получить список встреч по холдингу API
         |СтройЖилИнвест|завершена|15.07.2021 10:00|
         |ИнжирингАктив |отменена |24.07.2021 11:00|
     And my request contains "type=KSK"
+    And my request contains "holding=ГазПромБанк"
     When I request "list of KSK" endpoint
     Then I should receive a json list like:
         |ГазПромБанк   |активна  |20.07.2021 16:00|
@@ -38,6 +39,7 @@ Scenario: Получить список встреч по статусу API
         |СтройЖилИнвест|завершена|15.07.2021 10:00|
         |ИнжирингАктив |отменена |24.07.2021 11:00|
     And my request contains "type=KSK"
+    And my request contains "status=активна"
     When I request "list of KSK" endpoint
     Then I should receive a json list like:
         |ГазПромБанк   |активна  |20.07.2021 16:00|
