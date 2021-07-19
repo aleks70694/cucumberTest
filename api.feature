@@ -1,7 +1,7 @@
 Scenario: Получить список встреч весь API
     Given the execution things:
         авторизация пройдена:
-          |testcrmmanager8|EFS_CM_KEY_CLIENTS|
+          |EFS_CM_KEY_CLIENTS|
     And the existing BD :
         |холдинг       |статус   |дата проведения |
         |ГазПромБанк   |активна  |20.07.2021 16:00|
@@ -14,7 +14,7 @@ Scenario: Получить список встреч весь API
 Scenario: Получить список встреч по холдингу API
     Given the execution things:
         авторизация пройдена:
-          |testcrmmanager8|EFS_CM_KEY_CLIENTS|
+          |EFS_CM_KEY_CLIENTS|
     And the existing BD :
         |холдинг       |статус   |дата проведения |
         |ГазПромБанк   |активна  |20.07.2021 16:00|
@@ -31,7 +31,7 @@ Scenario: Получить список встреч по холдингу API
 Scenario: Получить список встреч по статусу API
     Given the execution things:
         авторизация пройдена:
-          |testcrmmanager8|EFS_CM_KEY_CLIENTS|
+          |EFS_CM_KEY_CLIENTS|
     And the existing BD :
         |холдинг       |статус   |дата проведения |
         |ГазПромБанк   |активна  |20.07.2021 16:00|
