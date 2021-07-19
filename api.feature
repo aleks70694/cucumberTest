@@ -1,6 +1,5 @@
 Scenario: Получить список встреч весь API
-    Given the execution things:
-        авторизация пройдена с ролью EFS_CM_KEY_CLIENTS
+    Given authorized with role EFS_CM_KEY_CLIENTS
     And the existing BD :
         |холдинг       |статус   |дата проведения |
         |ГазПромБанк   |активна  |20.07.2021 16:00|
@@ -11,8 +10,7 @@ Scenario: Получить список встреч весь API
     Then I should receive "list of three meetings"
         
 Scenario: Получить список встреч по холдингу API
-    Given the execution things:
-        авторизация пройдена с ролью EFS_CM_KEY_CLIENTS
+    Given authorized with role EFS_CM_KEY_CLIENTS
     And the existing BD :
         |холдинг       |статус   |дата проведения |
         |ГазПромБанк   |активна  |20.07.2021 16:00|
@@ -27,8 +25,7 @@ Scenario: Получить список встреч по холдингу API
         |ГазПромБанк   |завершена|20.05.2021 12:00|
     
 Scenario: Получить список встреч по статусу API
-    Given the execution things:
-        авторизация пройдена с ролью EFS_CM_KEY_CLIENTS
+    Given authorized with role EFS_CM_KEY_CLIENTS
     And the existing BD :
         |холдинг       |статус   |дата проведения |
         |ГазПромБанк   |активна  |20.07.2021 16:00|
